@@ -1,0 +1,31 @@
+package com.pluralsight.streams;
+
+import com.pluralsight.streams.model.Person;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Person> myFamily = new ArrayList<>();
+        myFamily.add(new Person("Dana", "Wyatt", 63));
+        myFamily.add(new Person("Zachary", "Westly", 31));
+        myFamily.add(new Person("Elisha", "Aslan", 14));
+        myFamily.add(new Person("Ian", "Auston", 16));
+        myFamily.add(new Person("Zephaniah", "Hughes", 9));
+        myFamily.add(new Person("Ezra", "Aiden", 17));
+
+        System.out.println("Before sorting:");
+        for (Person p : myFamily) {
+            System.out.println(p);
+        }
+
+        Collections.sort(myFamily);  // uses compareTo internally
+
+        System.out.println("\nAfter sorting by last name:");
+        for (Person p : myFamily) {
+            System.out.println(p);
+        }
+    }
+}
