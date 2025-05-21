@@ -11,6 +11,18 @@ public class Person implements Comparable<Person> {
         this.age = age;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     // Implement compareTo to sort by last name
     @Override
     public int compareTo(Person other) {
